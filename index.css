@@ -1,0 +1,661 @@
+body {
+  background: url("fotos/6e5fb3fb-82a0-420e-83b3-372499bec9fc.jpg") no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size:cover;
+      margin: auto;
+}
+.navegacao{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+  height: 50px;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  z-index: 999;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+.logotipo {
+  height: 150px;
+  width: auto;
+}
+
+.titulo {
+font-family:Arial, Helvetica, sans-serif;
+color: rgb(112, 108, 138);
+font-size: 70px;
+height: auto;
+text-align: center;
+font-family: 'Great Vibes', cursive;
+width: max-content;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+  @media(max-width:450px) {
+  .top{
+    display: flex ;
+    text-align: center  ;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+  }
+  .logotipo{
+    height: 100px;
+    width: 150px;
+  } 
+  .titulo{
+    font-size: 45px;
+    width: max-content;
+  }
+  nav{
+    display:flex;
+    flex-wrap: wrap;
+
+  }
+  .navegacao{
+
+  }
+}
+    
+/* ===========================================BOTOES==================================================================== */
+a{text-decoration: none;
+filter: none;
+width: max-content;
+color: inherit;
+height: max-content;}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 19px;
+    line-height: 34px;
+    height: 34px;
+    text-align:center;
+    width: 200px;
+    cursor: pointer;
+}
+  @media(max-width:450px){
+    .btn{
+      font-size: 20px;
+      width: 80px;
+      height: 50px;
+      line-height: 50px;
+    }
+  }
+    
+    .btn-home {
+        color: .000000;
+        transition: all 1s;
+        position: relative;
+      }
+      .btn-home span {
+        transition: all 1s;
+      }
+      .btn-home::before {
+        content: '';
+        position:absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 88%;
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.3s;
+        border-top-width: 3px;
+        border-bottom-width: 3px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-top-color: rgb(111, 165, 247);
+        border-bottom-color: rgb(111, 165, 247);
+        transform: scale(0.1, 1);
+      }
+      .btn-home:hover span {
+        letter-spacing: 2px;
+      }
+      .btn-home:hover::before {
+        opacity: 1; 
+        transform: scale(1, 1); 
+      }
+      .btn-home::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        transition: all 0.3s;
+      }
+      .btn-home:hover::after {
+        opacity: 0; 
+        transform: scale(0.1, 1);
+}
+
+.btn-sobre {
+    color: .000000;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .btn-sobre span {
+    transition: all 0.3s;
+  }
+  .btn-sobre::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 88%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color:  rgb(111, 165, 247);
+    border-bottom-color: rgb(111, 165, 247);
+    transform: scale(0.1, 1);
+  }
+  .btn-sobre:hover span {
+    letter-spacing: 2px;
+  }
+  .btn-sobre:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+  }
+  .btn-sobre::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 88%;
+    z-index: 1;
+    transition: all 0.3s;
+  }
+  .btn-sobre:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+}
+
+.btn-servicos {
+    color: .000000;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .btn-servicos span {
+    transition: all 0.3s;
+  }
+  .btn-servicos::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 88%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgb(111, 165, 247);
+    border-bottom-color: rgb(111, 165, 247);
+    transform: scale(0.1, 1);
+  }
+  .btn-servicos:hover span {
+    letter-spacing: 2px;
+  }
+  .btn-servicos:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+  }
+  .btn-servicos::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+  }
+  .btn-servicos:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+}
+
+.btn-contato {
+    color: .000000;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .btn-contato span {
+    transition: all 0.3s;
+  }
+  .btn-contato::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 88%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgb(111, 165, 247);
+        border-bottom-color: rgb(111, 165, 247);
+    transform: scale(0.1, 1);
+  }
+  .btn-contato:hover span {
+    letter-spacing: 2px;
+  }
+  .btn-contato:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+  }
+  .btn-contato::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+  }
+  .btn-contato:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+}
+
+/* =================================================================================================================
+===================================================================================================================== */
+
+
+/* ================================================ HOME  ===============================================================*/
+
+
+.principal{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-self: center;
+  padding: 60px;
+  margin-left: 200px;
+  text-align: center;
+  justify-content: center;
+  margin-right: 200px;
+}
+
+
+h1 {
+    font-size: 50px;
+    margin: 0px;  
+    color: rgb(62, 62, 255);
+}
+h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.bt-consulta {
+  width: max-content;
+  height: max-content;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: rgb(86, 111, 255);
+  font-size: 1.3em;
+  font-weight: 650;
+  font-family: 'Montserrat', sans-serif ;
+  padding: 10px;
+  margin-top: 20px;
+  color: white;
+  border-radius: 50px;
+  border: 0px;
+} 
+    .bt-consulta:hover{
+        font-size: 1.5em;
+}
+/* =================================================================================================================
+===================================================================================================================== */
+
+/* ================================================ FRASE IMPACTO  ===============================================================*/
+.frase {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ text-align: center;
+ align-items: center;
+ background-color: white;
+ width: 100%;
+ margin-top: 30px;
+ height: 230px; 
+ margin-bottom: 40px;
+}
+
+.tituloimpacto{
+  font-size: 35px;
+  margin-bottom: 0;
+}
+.fraseimpacto{
+  margin-top: 5px;
+  font-size: 23px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.aspas1{
+  height: 80px;
+  width: auto;
+}
+.aspas2{
+  height: 80px;
+  width: auto;
+  transform: rotate(180deg);
+}
+   
+
+.autor{
+  font-size: 20px;
+  margin-top: 0;
+}
+/* =================================================================================================================
+===================================================================================================================== */
+
+/* ================================================ QUEM SOU  ===============================================================*/
+.quemsou{
+  background-color: white;
+  width: 100%;
+  margin: auto;
+  height: max-content;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction:row;
+  text-align: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+
+.apresentacao{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background-image: radial-gradient(rgba(255, 192, 203, 0.445),rgba(255, 192, 203, 0.315), rgba(255, 117, 255, 0));
+  backdrop-filter: blur(50px);
+}
+  .quemEuSou{
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+    .introducao{
+      font-size: 20px;
+}
+.link{
+  margin-top: 5px;
+    font-size: 1.1em;
+    color: rgb(120, 120, 255);
+}
+  .link:hover{
+    transition: 0.3s;
+    font-size: 1.3em;
+    text-decoration: underline blue;
+  }
+.fotoMaria{
+  height: 350px;
+  width: auto;
+  margin-right: 20px;
+}
+
+/* =================================================================================================================
+===================================================================================================================== */
+
+/* ================================================ TERAPIAS  ===============================================================*/
+
+.terapias{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  background-color: rgb(234, 249, 255);
+  height: max-content;
+}
+
+.terapia1{
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+}
+  .fototerapia1{
+    height: 45px;
+    margin: auto;
+    width: max-content;
+}
+    .tituloterapia1{
+      font-size: 30px;
+}
+.terapia2{
+  display: flex;
+  flex-direction: column;
+}
+  .fototerapia2{
+    height: 45px;
+    margin: auto;
+    width: max-content;
+}
+    .tituloterapia2{
+      font-size: 30px;
+    }
+
+.terapia3{
+  display: flex;
+  flex-direction: column;
+}
+  .fototerapia3{
+    height: 45px;
+    margin: auto;
+    width: max-content;
+  }
+
+    .tituloterapia3{
+      font-size: 30px;
+}
+
+.descricaoTerapia{
+  font-size: 20px;
+  width: 70%;
+  margin: auto;
+}
+
+/* =================================================================================================================
+===================================================================================================================== */
+
+/* ================================================ ESPACO  ===============================================================*/
+
+.espaco{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+.textoespaco{
+   display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background-image: radial-gradient(rgba(255, 192, 203, 0.445),rgba(255, 192, 203, 0.315), rgba(255, 117, 255, 0));
+  backdrop-filter: blur(50px);
+}
+
+.tituloespaco{
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.descricaoEspaco{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+}
+.fotoEspaco2{
+  height: 350px;
+  width: auto;
+  margin-right: 20px;
+}
+
+/* =================================================================================================================
+===================================================================================================================== */
+
+/* ================================================ MAPA  ===============================================================*/
+
+.mapa{
+  display: flex;
+  flex-direction: column;
+}
+
+.final{
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  justify-content: space-evenly;
+}
+
+.contato{
+  display: flex;
+  flex-direction: column;
+}
+
+.contatenos{
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.endereco{
+  width: max-content;
+  font-size: 20px;
+}
+
+.numero{
+  width: max-content;
+  font-size: 20px;
+}
+
+.iconezap{
+  height: 30px;
+  margin-left: 5px;
+  width: max-content;
+}
+
+.bt-zap {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: max-content;
+  height: max-content;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: rgb(0, 180, 9);
+  font-size: 1.0em;
+  font-weight: 650;
+  font-family: 'Montserrat', sans-serif ;
+  padding: 5px;
+  color: white;
+  border-radius: 50px;
+  border: 0px;
+} 
+    .bt-zap:hover{
+        font-size: 1.2em;
+        padding: 6px;
+}
+
+.tituloEmail{
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.row{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(152, 152, 255, 0.438);
+  padding: 20px;
+  padding-top: 0;
+}
+
+.mensagem{
+  height: 150px;
+  width: 100%;
+}
+
+#inputNome{
+  width: 100%;
+}
+.nes{
+  font-size: 20px;
+}
+#inputEmail{
+  width: 100%;
+}
+.ede{
+  font-size: 20px;
+}
+
+.m {
+  font-size: 20px;
+}
