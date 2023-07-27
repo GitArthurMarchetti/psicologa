@@ -9,126 +9,135 @@
     <link rel="stylesheet" href="index.css">
     <script src="index.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=SUA_API_KEY&callback=initMap" async defer></script>
+    <link rel="icon" type="image/png" href="fotos/design_novo_2.png">
 </head>
 <body>
-<div class="navegacao">
-    <nav>
-        <a href=""><div class="btn btn-home">Home</div></a> 
+    <div class="navegacao">
+        <nav>
+            <button onclick="scrollToSection('home')" class="botaoInvisivel"><div class="btn btn-home">Home</div></button>
 
-        <a href="sobre.html"><div class="btn btn-sobre">Quem sou</div></a> 
+            <button onclick="scrollToSection('quemSou')" class="botaoInvisivel"><div class="btn btn-home">Quem sou eu</div></button>
 
-        <a href=""><div class="btn btn-servicos">Abordagens</div></a> 
+            <button onclick="scrollToSection('abordagens')" class="botaoInvisivel"><div class="btn btn-sobre">Abordagens</div></button> 
 
-        <a href=""><div class="btn btn-contato">Contato</div></a> 
-    </nav>
-</div>
-<header class="top">
-    <a href="index.html"><img class="logotipo" src="fotos/Meu projeto.png">  </a> 
-     <div class="titulo"><a href="index.html"> Maria Eduarda Veras</a></div> 
-</header>
+            <button onclick="scrollToSection('espaco')" class="botaoInvisivel"><div class="btn btn-servicos">Espaco</div> </button>
 
-<div class="principal">
-    <section>
-        <div class="bemvindo">
-            <h1> Psicologia infantil </h1>
-            <h2> Você está buscando apoio profissional para o bem-estar emocional de seus filhos? </h2>
-            <a href=""><button class="bt-consulta"> Entrar em contato </button></a> 
-        </div>  
-    </section>         
-</div>
+            <button onclick="scrollToSection('contato')" class="botaoInvisivel"><div class="btn btn-contato">Contato</div></button> 
+        </nav>
+    </div>
+    <header class="top">
+        <a href="index.html"><img class="logotipo" id="home" src="fotos/Meu projeto.png">  </a> 
+        <div class="titulo"><a href="index.html"> Maria Eduarda Veras</a></div> 
+    </header>
 
-<div class="frase">    
-    <p class="tituloimpacto">Frase impacto</p>
-<div class="fraseimpacto">
-    <img src="fotos/aspas-rosinha.png" class="aspas1">
-    <p>Nossa maior fraqueza está em desistir. O caminho mais certo de vencer é tentar mais uma vez.</p>
-    <img src="fotos/aspas-rosinha.png" class="aspas2">
-    </div>
-    <p class="autor">-autor</p>
-</div>
-<div class="quemsou">
-    <div class="apresentacao">
-        <p class="quemEuSou">Quem eu sou</p>
-        <p  class="introducao"> pequena introduçao de quem é</p>
-        <p><a href="sobre.html" class="link">Saber mais...</a></p>
-    </div>
-    <div class="fotoApresentacao">
-        <img src="fotos/fotoilustrativa.avif" class="fotoMaria">
-        <p>(foto ilustrativa)</p>
-    </div>
-</div>
-<div class="terapias">
-    <div class="terapia1">
-        <img src="fotos/lampada_azul.png" alt="" class="fototerapia1">
-        <p class="tituloterapia1"><b>Terapia 01</b></p>
-        <p class="descricaoTerapia">Descricao da terapia bem resumidinha aqui</p>
-        <p class="link"><a href="especialidades.html">Saiba Mais...</a></p>
+        <div class="principal">
+            <section>
+                <div class="bemvindo" >
+                    <h1> Psicologia infantil </h1>
+                    <h2> Você está buscando apoio profissional para o bem-estar emocional de seus filhos? </h2>
+                    <button class="bt-consulta" onclick="scrollToSection('contato')"> Entrar em contato </button>
+                </div>  
+            </section>         
+        </div>
 
-    </div>
+        <div class="frase">    
+            <p class="tituloimpacto">Frase impacto</p>
+        <div class="fraseimpacto">
+            <img src="fotos/aspas-rosinha.png" class="aspas1">
+            <p>Nossa maior fraqueza está em desistir. O caminho mais certo de vencer é tentar mais uma vez.</p>
+            <img src="fotos/aspas-rosinha.png" class="aspas2">
+            </div>
+            <p class="autor">~autor</p>
+        </div>
+        <div class="quemsou" id="quemSou">
+            <div class="apresentacao">
+                <p class="quemEuSou" >Quem eu sou</p>
+                <p  class="introducao"> pequena introduçao de quem é</p>
+                <p><a href="sobre.html" class="link">Saber mais...</a></p>
+            </div>
+            <div class="fotoApresentacao">
+                <img src="fotos/fotoilustrativa.avif" class="fotoMaria">
+                <p>(foto ilustrativa)</p>
+            </div>
+        </div>
+        <div class="terapias" id="abordagens">
+            <div class="terapia1">
+                <img src="fotos/lampada_azul.png" alt="" class="fototerapia1">
+                <p class="tituloterapia1"><b>Terapia 01</b></p>
+                <p class="descricaoTerapia">Descricao da terapia bem resumidinha aqui</p>
+                <p class="link"><a href="especialidades.html">Saiba Mais...</a></p>
 
-    <div class="terapia2">
-        <img src="fotos/cerebro_azul.png" alt="" class="fototerapia2">
-        <p class="tituloterapia2"><b>Terapia 02</b></p>
-        <p class="descricaoTerapia">Descricao da terapia bem resumidinha aqui</p>
-        <p class="link"><a href="especialidades.html">Saiba Mais...</a></p>
-    </div>
+            </div>
 
-    <div class="terapia3">
-        <img src="fotos/brinquedo_azul.png" alt="" class="fototerapia1">
-        <p class="tituloterapia3"><b>Terapia 03</b></p>
-        <p class="descricaoTerapia">Descricao da terapia bem resumidinha aqui</p>
-        <p class="link"><a href="especialidades.html">Saiba Mais...</a></p>
-    </div>
-</div>
-<div class="espaco">
-    <div class="textoespaco">
-        <p class="tituloespaco"><b>Nosso Espaço</b></p>
-        <p class="descricaoEspaco">Informaçãozinha resumidinha do espaçinho confortavel que terá as consultinhas</p>
-        <p class="link"><a href="espaco.html">Saiba Mais...</a></p>
-    </div>
-    <div class="fotoEspaco">
-        <img src="fotos/sala-a-2.jpg" alt="" class="fotoEspaco2">
-    </div>
-</div>
-<div class="mapa">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d312.5443733653169!2d-48.55201313148751!3d-27.592415550489346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952738226ee834ef%3A0x6645b33cd584e682!2sCondom%C3%ADnio%20Comercial%20Dom%20Jaime%20C%C3%A2mara!5e0!3m2!1spt-BR!2sbr!4v1689646476737!5m2!1spt-BR!2sbr" width="1500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="terapia2">
+                <img src="fotos/cerebro_azul.png" alt="" class="fototerapia2">
+                <p class="tituloterapia2"><b>Terapia 02</b></p>
+                <p class="descricaoTerapia">Descricao da terapia bem resumidinha aqui</p>
+                <p class="link"><a href="especialidades.html">Saiba Mais...</a></p>
+            </div>
+
+            <div class="terapia3">
+                <img src="fotos/brinquedo_azul.png" alt="" class="fototerapia1">
+                <p class="tituloterapia3"><b>Terapia 03</b></p>
+                <p class="descricaoTerapia">Descricao da terapia bem resumidinha aqui</p>
+                <p class="link"><a href="especialidades.html">Saiba Mais...</a></p>
+            </div>
+        </div>
+        <div class="espaco">
+            <div class="textoespaco" id="espaco">
+                <p class="tituloespaco"><b>Nosso Espaço</b></p>
+                <p class="descricaoEspaco">Informaçãozinha resumidinha do espaçinho confortavel que terá as consultinhas</p>
+                <p class="link"><a href="espaco.html">Saiba Mais...</a></p>
+            </div>
+            <div class="fotoEspaco">
+                <img src="fotos/sala-a-2.jpg" alt="" class="fotoEspaco2">
+            </div>
+        </div>
     <div class="final">
-        <div class="contato">
-            <p class="contatenos">Contate-nos:</p>
-        <div class="contatos">
-                <p class="endereco">Endereço: <br>
-                    R. Dom Jaime Câmara, 66 - sala 702 - <br>
-                    Centro, Florianópolis - SC, 88015-120 </p>
-                <p class="numero">Telefone: <br>
-                    (48) 99999-9999 </p>
-                    <a href=""><button class="bt-zap"> Contato via Whatsapp <img class="iconezap" src="fotos/zap-branco.png" alt=""> </button></a> 
-        </div> 
-        </div>
+            <div class="contato">
+                    <p class="contatenos" id="contato"><b>Contato: </b></p>
+                <div class="contatos">
+                        <p class="numero">Telefone: <br>
+                            (48) 99999-9999 </p><div class="row">
+                    
+    <p class="tituloEmail">Mandar Email:</p>
+                    <form action="https://formsubmit.co/avinhasmarchetti@gmail.com" method="post" class="card">
+                        <label for="inputNome" class="nes"></label>
+                        <br>
+                        <input type="text" id="inputNome" name="name" placeholder="Seu Nome" required maxlength="25" minlength="2" required>
+                        <br>
+                        <br>
+                        <span></span>
 
-        <div class="row">
-            <p class="tituloEmail">Mandar Email:</p>
-            <form action="https://formsubmit.co/avinhasmarchetti@gmail.com" method="post" class="card">
-                <label for="inputNome" class="nes">Nome e sobrenome:</label>
-                <br>
-                <input type="text" id="inputNome" name="name" required maxlength="25" minlength="2">
-                <br>
-                <br>
-                <span></span>
+                        <label for="inputEmail" class="ede"></label>
+                        <br>
+                        <input type="email" id="inputEmail" placeholder="Seu Email" name="email" required maxlength="50" required>
+                        <br>
+                        <br>
+                        <span></span>
 
-                <label for="inputEmail" class="ede">Endereço de Email:</label>
-                <br>
-                <input type="email" id="inputEmail" name="email" required maxlength="50">
-                <br>
-                <br>
-                <span></span>
-                <label for="textAreaMensagem" class="m">Mensagem:</label>
-                <br>
-                <textarea name="mensagem" id="textAreaMensagem" required maxlength="100" class="mensagem"></textarea>
+                        <label for="textAreaMensagem" class="m"></label>
+                        <br>
+                        <textarea name="mensagem" id="textAreaMensagem" placeholder="Escreva uma mensagem" required maxlength="100" class="mensagem" required></textarea>
+                        <input type="hidden" name="_next" value="https://psicologa-infantil.netlify.app//obrigado.html">
 
-                <button type="submit">Enviar Mensagem</button>
-            </form>
-        </div>
+                        <button class="button-msg" type="submit">Enviar Mensagem</button>
+                    </form>
+                    
+            
+                    </div>    
+                </div> 
+            </div>
+    <div class="mapa">
+            <label for="map" class="localizacao"><b>Localização:</b></label>
+            <p class="rua">R. Dom Jaime Câmara, 66 - sala 702 - <br> Centro, Florianópolis - SC, 88015-120</p>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d312.5443733653169!2d-48.55201313148751!3d-27.592415550489346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952738226ee834ef%3A0x6645b33cd584e682!2sCondom%C3%ADnio%20Comercial%20Dom%20Jaime%20C%C3%A2mara!5e0!3m2!1spt-BR!2sbr!4v1689646476737!5m2!1spt-BR!2sbr" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>    
     </div>
-</div>
+    <a href="" class="btn-whatsapp-pulse">
+        <img src="fotos/icone_zap.png" class="fotozap">
+        <i class="fab fa-whatsapp"></i>
+    </a>    
 </body>
 </html>

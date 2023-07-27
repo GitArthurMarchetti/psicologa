@@ -5,6 +5,10 @@ body {
       -o-background-size: cover;
       background-size:cover;
       margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow-x: hidden;
 }
 .navegacao{
   display: flex;
@@ -14,9 +18,10 @@ body {
   margin: auto;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 9999;
   background-color: white;
   height: 50px;
+  justify-content: center;
 }
 
 nav{
@@ -83,6 +88,12 @@ margin-right: auto;
 }
     
 /* ===========================================BOTOES==================================================================== */
+.botaoInvisivel{
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+
+}
+
 a{text-decoration: none;
 filter: none;
 width: max-content;
@@ -365,6 +376,7 @@ h2 {
  width: 100%;
  margin-top: 30px;
  height: 230px; 
+ justify-content: center;
  margin-bottom: 40px;
 }
 
@@ -407,6 +419,7 @@ h2 {
   height: max-content;
   margin-bottom: 10px;
   display: flex;
+  justify-content: center;
   flex-direction:row;
   text-align: center;
   justify-content: space-between;
@@ -434,11 +447,12 @@ h2 {
   margin-top: 5px;
     font-size: 1.1em;
     color: rgb(120, 120, 255);
+    transition: all 0.4s;
 }
   .link:hover{
-    transition: 0.3s;
+    
     font-size: 1.3em;
-    text-decoration: underline blue;
+    text-decoration: underline rgb(120, 120, 255);
   }
 .fotoMaria{
   height: 350px;
@@ -564,19 +578,30 @@ h2 {
 .mapa{
   display: flex;
   flex-direction: column;
+  background-color: rgba(255, 192, 203, 0.418);
+  padding: 20px;
+}
+map{
+  width: 20px;
 }
 
 .final{
   background-color: white;
   display: flex;
   flex-direction: row;
-  padding: 50px;
-  justify-content: space-evenly;
+  justify-content: center;
+  justify-content: space-between;
+  padding-left: 150px;
+  padding-top: 50px ;
+  padding-right: 100px;
 }
 
 .contato{
   display: flex;
   flex-direction: column;
+  background-color: rgba(152, 152, 255, 0.438);
+  padding: 20px;
+
 }
 
 .contatenos{
@@ -589,10 +614,13 @@ h2 {
   width: max-content;
   font-size: 20px;
 }
-
+.rua{
+  font-size: 20px;
+}
 .numero{
   width: max-content;
   font-size: 20px;
+  padding-left: 15px;
 }
 
 .iconezap{
@@ -603,37 +631,32 @@ h2 {
 
 .bt-zap {
   margin-top: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   width: max-content;
   height: max-content;
   transition: all 0.3s;
   cursor: pointer;
-  background: rgb(0, 180, 9);
-  font-size: 1.0em;
-  font-weight: 650;
-  font-family: 'Montserrat', sans-serif ;
-  padding: 5px;
+  background: rgb(0, 179, 9);
+  padding: 10px;
+  padding-left: 7px;
+  padding-bottom: 8px;
   color: white;
-  border-radius: 50px;
+  border-radius: 1000px;
   border: 0px;
+  position:sticky;
+  bottom: 10px;
 } 
     .bt-zap:hover{
-        font-size: 1.2em;
-        padding: 6px;
+        background: rgb(0, 116, 6);
 }
 
 .tituloEmail{
-  font-size: 50px;
+  font-size: 30px;
   margin-top: 0;
   margin-bottom: 10px;
 }
 .row{
   display: flex;
   flex-direction: column;
-  background-color: rgba(152, 152, 255, 0.438);
   padding: 20px;
   padding-top: 0;
 }
@@ -641,21 +664,86 @@ h2 {
 .mensagem{
   height: 150px;
   width: 100%;
+  font-size: 20px;
+  padding: 5px;
 }
 
 #inputNome{
   width: 100%;
+  border: 3px solid rgb(0, 0, 136);
+  height: 20px;
+  font-size: 20px;
+  padding: 5px;
 }
 .nes{
   font-size: 20px;
 }
 #inputEmail{
   width: 100%;
+  font-size: 20px;
+  border: 3px solid rgb(0, 0, 136);
+  padding: 5px;
 }
 .ede{
   font-size: 20px;
 }
+#textAreaMensagem{
+  border: 3px solid rgb(0, 0, 136);
+}
 
 .m {
   font-size: 20px;
+}
+
+.button-msg{
+  height: 40px;
+  background-color: rgb(110, 110, 255);
+  color: white;
+  cursor:pointer;
+  width: 100%;
+  font-size: 1.0em;
+  border: 0;
+  border-radius: 20px;
+}   
+.button-msg:hover{
+  background-image: linear-gradient(rgb(110, 110, 255), rgb(69, 69, 255));
+}
+
+.btn-whatsapp-pulse {
+	background: #25d366;
+	color: white;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-size: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 0;
+	height: 0;
+	padding: 35px;
+	text-decoration: none;
+	border-radius: 50%;
+	animation-name: pulse;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+	}
+	80% {
+		box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+	}
+}
+
+
+.localizacao{
+  font-size: 50px;
+}
+
+.fotozap{
+  height:80px;
 }
